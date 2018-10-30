@@ -7,8 +7,7 @@ public class service {
 	private Map<Integer, Account> account = new HashMap<Integer, Account>();
 	private static int id = 1;
 
-	public service() {
-	}
+
 
 	public void addAccount(Account accountToAdd) {
 		account.put(id, accountToAdd);

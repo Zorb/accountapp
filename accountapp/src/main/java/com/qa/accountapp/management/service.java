@@ -14,6 +14,10 @@ public class service {
 		id++;
 	}
 
+	public Account searchAccount(Account accountToSearch) {
+		Account result = account.get("accountToSearch");
+		return result;
+	}
 	public void delAccount(Integer idToDel) {
 		account.remove(idToDel);
 	}

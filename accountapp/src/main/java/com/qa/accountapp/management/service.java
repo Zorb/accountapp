@@ -10,13 +10,15 @@ public class service {
 
 	public Boolean searchName(String NameToSearch) {
 		int count = 0;
-		for (Account it : account.values()) {
-			if (it.getFirstName().equals(NameToSearch)) {
-				count++;
-			}
-		}
-		System.out.println(count + " people with that name.");
-		if (count > 0) {
+		// for (Account it : account.values()) {
+		// if (it.getFirstName().equals(NameToSearch)) {
+		// count++;
+		// }
+		// }
+		long s = account.entrySet().stream().filter(e -> e.getValue().getFirstName().equals(NameToSearch)).count();
+
+		System.out.println(s + " people with that name.");
+		if (s > 0) {
 			return true;
 		}
 		return false;

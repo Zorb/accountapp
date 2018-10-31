@@ -8,7 +8,7 @@ import com.qa.accountapp.management.service;
 public class App extends service {
 
 	public static void main(String[] args) {
-		 	Account bob = new Account("Bob", "Odenkirk", "wdqdwq1221");
+		Account bob = new Account("Bob", "Odenkirk", "wdqdwq1221");
 		Account wefew = new Account("Bosdcdscb", "Odenkirk", "wdqdwq1221");
 		Account bofewfb = new Account("Bcdscsdcob", "Odenkirk", "wdqdwq1221");
 		Account bsdsdsdcob = new Account("Bdscsdcsdob", "Osdcdscsdcsddenkirk", "wdqdwq1221");

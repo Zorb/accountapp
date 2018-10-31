@@ -8,7 +8,19 @@ public class service {
 	private static int id = 1;
 
 
-
+	public Boolean searchName(String NameToSearch) {
+		int count = 0;
+		for (Account it : account.values()) {
+			if (it.getFirstName().equals(NameToSearch)) {
+				count++;
+			}
+		}
+		System.out.println(count + " people with that name.");
+		if (count > 0) {
+			return true;
+		}
+		return false;
+	}
 	public void addAccount(Account accountToAdd) {
 		account.put(id, accountToAdd);
 		id++;

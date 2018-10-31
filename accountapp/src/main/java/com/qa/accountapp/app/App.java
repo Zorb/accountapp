@@ -1,7 +1,5 @@
 package com.qa.accountapp.app;
 
-import org.json.JSONObject;
-
 import com.qa.accountapp.management.Account;
 import com.qa.accountapp.management.service;
 
@@ -19,8 +17,7 @@ public class App extends service {
 		map.addAccount(bofewfb);
 		map.addAccount(bsdsdsdcob);
 		
-		JSONObject json = new JSONObject(map);
-		System.out.println(json);
+
 
 	}
 

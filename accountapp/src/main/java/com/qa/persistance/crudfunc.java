@@ -27,7 +27,7 @@ public class crudfunc implements AccountRepo {
 
 	@Override
 	public String getAllAccounts() {
-		Query query = manager.createQuery("Select a FROM Accounts a ORDER BY a.title DESC");
+		Query query = manager.createQuery("Select a FROM Accounts a ORDER BY a.lastName DESC");
 		Collection<Account> accounts = (Collection<Account>) query.getResultList();
 		// Converting Object to JSON
 		return util.getJSONForObject(accounts);
@@ -37,6 +37,9 @@ public class crudfunc implements AccountRepo {
 	@Transactional(REQUIRED)
 	public String addAccount(String account) {
 		Account aAccount = util.getObjectForJSON(account, Account.class);
+		if (aAccount.getAccountNumber().equals(9999)) {
+			return "{\"This account is locked\"}";
+		}
 		manager.persist(aAccount);
 		return "{\"message\": \"account has been sucessfully added\"}";
 	}
